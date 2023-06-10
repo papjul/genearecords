@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin - CSV import - Step 2{% endblock %}
+
+{% block content %}
+    <h2>Import</h2>
+    <a class="btn btn-primary" href="{{ path('admin_import_edit_properties', {id: import.id}) }}">Edit properties</a>
+    <a class="btn btn-primary" href="{{ path('admin_import_edit_preview', {id: import.id}) }}">Preview data and import</a>
+{% endblock %}

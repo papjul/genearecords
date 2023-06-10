@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}View record details{% endblock %}
+
+{% block content %}
+    <h2>View record details</h2>
+
+    {% for person in record.persons|filter(p => p.relationship == 'individual') %}
+        <strong>{{ person.surname }} {{ person.givenNames }}</strong>
+
+        <p>To be completed</p>
+    {% endfor %}
+{% endblock %}

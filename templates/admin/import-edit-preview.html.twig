@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin - CSV import - Preview{% endblock %}
+
+{% block content %}
+    <h2>Preview import</h2>
+
+    {% if csvErrors|length %}
+        <p>The following records will be skipped due to errors:</p>
+        <div class="table-responsive">
+            <table class="table table-sm table-bordered">
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th style="min-width: 300px">Error(s)</th>
+                    {% for header in rows[0]|keys %}
+                        <th style="white-space: nowrap">{{ header|trans({}, 'record_fields') }}</th>
+                    {% endfor %}
+                </tr>
+                </thead>
+                <tbody>
+                {% for i, errors in csvErrors %}
+                    <tr>
+                        <th>{{ i + 1 }}</th>
+                        <td style="color: red">{{ errors|join("\n") }}</td>
+                        {% for field in rows[i] %}
+                            <td>{{ field }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <p>No errors found in the CSV file.</p>
+    {% endif %}
+
+    <p>If that sounds good for you, please proceed. Otherwise, import a new CSV file and delete this one.</p>
+
+    <form method="post">
+        <p><button class="btn btn-primary">Proceed to import</button></p>
+    </form>
+{% endblock %}

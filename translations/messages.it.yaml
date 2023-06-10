@@ -1,0 +1,43 @@
+ui:
+  admin:
+    csv_import: Importazione CSV
+
+  user:
+    login: Accedere
+
+form:
+  csv:
+    skipped: (ignorato)
+
+    record_type: Tipo di atto
+    record_number: Numero di atto
+    page_number: Numero di pagina
+    notes: Note
+    indexed_by: Indicizzato da
+    source: Fonte
+    link: Link
+
+    full_date: Data completa
+    record_day: Giorno
+    record_month: Mese
+    record_year: Anno
+
+    place: Luogo
+    province: Provincia
+    country: Paese
+
+    surname: Cognome
+    given_names: Nome
+    age: Età
+
+    spouse_surname: Cognome del coniuge
+    spouse_given_names: Nome del coniuge
+    spouse_age: Età del coniuge
+
+    father_surname: Cognome del padre
+    father_given_names: Nome del padre
+    father_age: Età del padre
+
+    mother_surname: Cognome della madre
+    mother_given_names: Nome della madre
+    mother_age: Età della madre

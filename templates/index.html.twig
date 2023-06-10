@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+    <div class="px-4 py-5 my-5 text-center">
+        <h1 class="display-5 fw-bold text-body-emphasis">Welcome!</h1>
+        {# TODO: Make the description customizable #}
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">On this website, you can search for free your ancestors in our
+                user-contributed database of records.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a href="#search" class="btn btn-primary btn-lg px-4 gap-3">Search my ancestors</a>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="py-5 my-5">
+        <h2 id="search">Search</h2>
+        {{ form_start(form) }}
+        <p>Currently, only exact search is supported. Fuzzy search will come later.</p>
+        <div class="row">
+            <div class="col-md-6">
+                {{ form_row(form.surname, {'attr': {'class': 'form-control-lg'}}) }}
+            </div>
+            <div class="col-md-6">
+                {{ form_row(form.given_names, {'attr': {'class': 'form-control-lg'}}) }}
+            </div>
+            <div class="col-md-6">
+                {{ form_row(form.location, {'attr': {'class': 'form-control-lg'}}) }}
+            </div>
+            <div class="col-md-6">
+                {{ form_row(form.year, {'attr': {'class': 'form-control-lg'}}) }}
+            </div>
+        </div>
+        <button class="btn btn-lg btn-primary">Search</button>
+        <a href="{{ path('search_advanced') }}" class="btn btn-lg btn-outline-primary">Advanced search</a>
+        {{ form_end(form) }}
+    </div>
+
+    <hr class="mb-5" />
+
+    <div class="py-5 my-5">
+        <h2 id="explore">Explore</h2>
+
+        <p>Explore currently available archives.</p>
+
+        <p><a href="{{ path('explore') }}" class="btn btn-primary">Explore places</a></p>
+    </div>
+
+    <hr class="mb-5" />
+
+    <div class="py-5 my-5">
+        <h2 id="contribute">Contribute</h2>
+
+        <p>Contribute to the database.</p>
+
+        <p><a href="{{ path('contribute') }}" class="btn btn-primary">Contribute</a></p>
+    </div>
+{% endblock %}

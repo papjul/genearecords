@@ -1,0 +1,72 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Admin - CSV import - Edit properties{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('admin_import_properties') }}
+{% endblock %}
+
+{% block content %}
+    <h2>Edit import properties</h2>
+
+    {{ form_errors(form) }}
+
+    {{ form_start(form) }}
+        <h3>Fields matching</h3>
+        <p>Please review the columns we found in the file to match with our database fields.</p>
+        <table class="table table-sm w-auto">
+            {% for field in form.fields %}
+                <tr>
+                    <td>
+                        {{ form_row(field.number) }}
+                        {{ headers[field.number.vars.value] }}
+                    </td>
+                    <td>
+                        {{ form_row(field.database_field) }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        <h3>Additional fields</h3>
+        <p>Sometimes, some fields common to all records are not present in the CSV. For example, the country will usually be the same for the whole file. You can add this information here.</p>
+
+        <div class="mb-3" {{ stimulus_controller('form-collection') }}
+                data-form-collection-index-value="{{ form.fields_additional|length > 0 ? form.fields_additional|last.vars.name + 1 : 0 }}"
+                data-form-collection-prototype-value="{{ form_row(form.fields_additional.vars.prototype.database_field)|e('html_attr') }}{{ form_row(form.fields_additional.vars.prototype.value)|e('html_attr') }}"
+        >
+            <div {{ stimulus_target('form-collection', 'collectionContainer') }}>
+                {% for field in form.fields_additional %}
+                    <div class="row row-cols-lg-auto g-3">
+                        {{ form_row(field.database_field) }}
+                        {{ form_row(field.value) }}
+                    </div>
+                {% endfor %}
+            </div>
+            <button class="btn btn-outline-primary" type="button" {{ stimulus_action('form-collection', 'addCollectionElement') }}>Add an additional field</button>
+        </div>
+
+        {# <table class="table table-sm w-auto fields-additional"
+               data-index="{{ form.fields_additional|length > 0 ? form.fields_additional|last.vars.name + 1 : 0 }}"
+               data-prototype="{{ form_widget(form.fields_additional.vars.prototype)|e('html_attr') }}">
+            {% for field in form.fields_additional %}
+                <tr>
+                    <td>
+                        {{ form_row(field.database_field) }}
+                    </td>
+                    <td>
+                        {{ form_row(field.value) }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        <button class="btn btn-outline-primary add_item_link" type="button" data-collection-holder-class="fields-additional">Add an additional field</button>#}
+
+        {% if import.records|length > 0 %}
+            <p class="alert alert-danger">This file was already imported. By saving changes, all data previously imported will be deleted, and you will have to run preview and import records again.</p>
+        {% endif %}
+
+        <button class="btn btn-primary">Save</button>
+    {{ form_end(form) }}
+{% endblock %}

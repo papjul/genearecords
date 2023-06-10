@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+    <h2 id="search">Advanced search</h2>
+    <p>Advanced search is not available yet. In the meantime, you can use the simple search.</p>
+
+    {{ form_start(form) }}
+    <p>Currently, only exact search is supported. Fuzzy search will come later.</p>
+    <div class="row">
+        <div class="col-md-6">
+            {{ form_row(form.surname, {'attr': {'class': 'form-control-lg'}}) }}
+        </div>
+        <div class="col-md-6">
+            {{ form_row(form.given_names, {'attr': {'class': 'form-control-lg'}}) }}
+        </div>
+        <div class="col-md-6">
+            {{ form_row(form.location, {'attr': {'class': 'form-control-lg'}}) }}
+        </div>
+        <div class="col-md-6">
+            {{ form_row(form.year, {'attr': {'class': 'form-control-lg'}}) }}
+        </div>
+    </div>
+    <button class="btn btn-lg btn-primary">Search</button>
+    {{ form_end(form) }}
+{% endblock %}

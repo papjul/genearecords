@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Locations{% endblock %}
+
+{% block content %}
+    <a class="btn btn-primary" href="{{ path('admin_location_add_missings') }}">Add missing locations</a>
+    <a class="btn btn-primary" href="{{ path('admin_location_regenerate_statistics') }}">Regenerate statistics</a>
+    <a class="btn btn-primary" href="{{ path('explore') }}">Explore locations</a>
+{% endblock %}

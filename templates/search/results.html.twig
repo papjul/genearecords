@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Search results{% endblock %}
+
+{% block content %}
+    <h3 id="result">Search results</h3>
+    {% if records|length %}
+        <div class="table-responsive">
+            <table class="table w-auto">
+                <thead>
+                <tr>
+                    <th>Person</th>
+                    <th>Events</th>
+                    <th>Details</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for record in records %}
+                    <tr>
+                        <td>
+                            {% for person in record.persons|filter(p => p.relationship == 'individual') %}
+                                <strong>{{ person.surname }} {{ person.givenNames }}</strong>
+                            {% endfor %}
+                        </td>
+                        <td>
+                            {% for event in record.events %}
+                                <strong>{{ event.type }}:</strong> {{ event.year }}
+                            {% endfor %}
+                        </td>
+                        <td>
+                            <a href="{{ path('record_view', {id: record.id}) }}">Access</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <hr/>
+    {% else %}
+        <p><em>No result found.</em></p>
+    {% endif %}
+{% endblock %}

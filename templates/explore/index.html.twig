@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+    <h2>Explore</h2>
+
+    {% if countries is defined %}
+        <div class="mb-3">
+            <h3>Countries</h3>
+            <div class="row">
+                {% for country in countries %}
+                    <div class="col-lg-4 col-md-3">
+                        <a href="{{ path('explore') }}?country={{ country.country|e('url')|e('html_attr') }}">{{ country.country }} ({{ country.total|format_number }})</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+
+    {% if provinces is defined %}
+        <div class="mb-3">
+            <h3>Provinces of {{ country }}</h3>
+            <div class="row">
+                {% for province in provinces %}
+                    <div class="col-lg-4 col-md-3">
+                        <a href="{{ path('explore') }}?country={{ province.country|e('url')|e('html_attr') }}&amp;province={{ province.province|e('url')|e('html_attr') }}">{{ province.province }} ({{ province.total|format_number }})</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+
+    {% if places is defined %}
+        <div class="mb-3">
+            <h3>Places in {{ province }}, {{ country }}</h3>
+            <table class="table table-bordered w-auto">
+                <thead>
+                    <tr>
+                        <th>Place</th>
+                        <th>Records</th>
+                        <th>From</th>
+                        <th>To</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for place in places %}
+                        <tr>
+                            <td><strong>{{ place.place }}</strong></td>
+                            <td>{{ place.allRecordsTotal|format_number }}</td>
+                            <td>{{ place.allRecordsYearFrom }}</td>
+                            <td>{{ place.allRecordsYearTo }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% endif %}
+
+    <h3>Map</h3>
+    <p>Upcoming.</p>
+{% endblock %}

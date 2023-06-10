@@ -1,0 +1,160 @@
+record:
+  _: Acte
+  record_type: Type d’acte
+  record_number: Numéro d’acte
+  page_number: Numéro de page
+  notes: Notes
+  indexed_by: Indexé par
+  source: Source
+  link: Lien
+
+person:
+  _: Personne
+
+  individual:
+    _: Personne concernée
+    surname: Nom de famille
+    given_names: Prénoms
+    age: Âge
+
+  spouse:
+    _: Conjoint
+    surname: Conjoint | Nom de famille
+    given_names: Conjoint | Prénoms
+    age: Conjoint | Âge
+
+  father:
+    _: Père
+    surname: Père | Nom de famille
+    given_names: Père | Prénoms
+    age: Père | Âge
+
+  mother:
+    _: Mère
+    surname: Mère | Nom de famille
+    given_names: Mère | Prénoms
+    age: Mère | Âge
+
+  father_father:
+    _: Grand-père paternel
+    surname: Grand-père paternel | Nom de famille
+    given_names: Grand-père paternel | Prénoms
+    age: Grand-père paternel | Âge
+
+  father_mother:
+    _: Grand-mère paternelle
+    surname: Grand-mère paternelle | Nom de famille
+    given_names: Grand-mère paternelle | Prénoms
+    age: Grand-mère paternelle | Âge
+
+  mother_father:
+    _: Grand-père maternel
+    surname: Grand-père maternel | Nom de famille
+    given_names: Grand-père maternel | Prénoms
+    age: Grand-père maternel | Âge
+
+  mother_mother:
+    _: Grand-mère maternelle
+    surname: Grand-mère maternelle | Nom de famille
+    given_names: Grand-mère maternelle | Prénoms
+    age: Grand-mère maternelle | Âge
+
+  spouse_father:
+    _: Père du conjoint
+    surname: Père du conjoint | Nom de famille
+    given_names: Père du conjoint | Prénoms
+    age: Père du conjoint | Âge
+
+  spouse_mother:
+    _: Mère du conjoint
+    surname: Mère du conjoint | Nom de famille
+    given_names: Mère du conjoint | Prénoms
+    age: Mère du conjoint | Âge
+
+  spouse_father_father:
+    _: Grand-père paternel du conjoint
+    surname: Grand-père paternel du conjoint | Nom de famille
+    given_names: Grand-père paternel du conjoint | Prénoms
+    age: Grand-père paternel du conjoint | Âge
+
+  spouse_father_mother:
+    _: Grand-mère paternelle du conjoint
+    surname: Grand-mère paternelle du conjoint | Nom de famille
+    given_names: Grand-mère paternelle du conjoint | Prénoms
+    age: Grand-mère paternelle du conjoint | Âge
+
+  spouse_mother_father:
+    _: Grand-père maternel du conjoint
+    surname: Grand-père maternel du conjoint | Nom de famille
+    given_names: Grand-père maternel du conjoint | Prénoms
+    age: Grand-père maternel du conjoint | Âge
+
+  spouse_mother_mother:
+    _: Grand-mère maternelle du conjoint
+    surname: Grand-mère maternelle du conjoint | Nom de famille
+    given_names: Grand-mère maternelle du conjoint | Prénoms
+    age: Grand-mère maternelle du conjoint | Âge
+
+event:
+  _: Évènement
+
+  birth:
+    _: Naissance
+    full_date: Naissance | Date complète
+    day: Naissance | Jour
+    month: Naissance | Mois
+    year: Naissance | Année
+    place: Naissance | Lieu
+    province: Naissance | Province
+    country: Naissance | Pays
+
+  baptism:
+    _: Baptème
+    full_date: Baptème | Date complète
+    day: Baptème | Jour
+    month: Baptème | Mois
+    year: Baptème | Année
+    place: Baptème | Lieu
+    province: Baptème | Province
+    country: Baptème | Pays
+
+  marriage:
+    _: Mariage
+    full_date: Mariage | Date complète
+    day: Mariage | Jour
+    month: Mariage | Mois
+    year: Mariage | Année
+    place: Mariage | Lieu
+    province: Mariage | Province
+    country: Mariage | Pays
+
+  death:
+    _: Décès
+    full_date: Décès | Date complète
+    day: Décès | Jour
+    month: Décès | Mois
+    year: Décès | Année
+    place: Décès | Lieu
+    province: Décès | Province
+    country: Décès | Pays
+
+  burial:
+    _: Inhumation
+    full_date: Inhumation | Date complète
+    day: Inhumation | Jour
+    month: Inhumation | Mois
+    year: Inhumation | Année
+    place: Inhumation | Lieu
+    province: Inhumation | Province
+    country: Inhumation | Pays
+
+  other:
+    _: Autre
+    full_date: Autre | Date complète
+    day: Autre | Jour
+    month: Autre | Mois
+    year: Autre | Année
+    place: Autre | Lieu
+    province: Autre | Province
+    country: Autre | Pays
+    type: Autre | Type

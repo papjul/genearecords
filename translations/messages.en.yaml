@@ -1,0 +1,6 @@
+ui:
+  admin:
+    csv_import: CSV import
+
+  user:
+    login: Login

@@ -1,0 +1,160 @@
+record:
+  _: Record
+  record_type: Record type
+  record_number: Record number
+  page_number: Page number
+  notes: Notes
+  indexed_by: Indexed by
+  source: Source
+  link: Link
+
+person:
+  _: Person
+
+  individual:
+    _: Involved person
+    surname: Surname
+    given_names: Given names
+    age: Age
+
+  spouse:
+    _: Spouse
+    surname: Spouse | Surname
+    given_names: Spouse | Given names
+    age: Spouse | Age
+
+  father:
+    _: Father
+    surname: Father | Surname
+    given_names: Father | Given names
+    age: Father | Age
+
+  mother:
+    _: Mother
+    surname: Mother | Surname
+    given_names: Mother | Given names
+    age: Mother | Age
+
+  father_father:
+    _: Father’s father
+    surname: Father’s father | Surname
+    given_names: Father’s father | Given names
+    age: Father’s father | Age
+
+  father_mother:
+    _: Father’s mother
+    surname: Father’s mother | Surname
+    given_names: Father’s mother | Given names
+    age: Father’s mother | Age
+
+  mother_father:
+    _: Mother’s father
+    surname: Mother’s father | Surname
+    given_names: Mother’s father | Given names
+    age: Mother’s father | Age
+
+  mother_mother:
+    _: Mother’s mother
+    surname: Mother’s mother | Surname
+    given_names: Mother’s mother | Given names
+    age: Mother’s mother | Age
+
+  spouse_father:
+    _: Spouse’s father
+    surname: Spouse’s father | Surname
+    given_names: Spouse’s father | Given names
+    age: Spouse’s father | Age
+
+  spouse_mother:
+    _: Spouse’s mother
+    surname: Spouse’s mother | Surname
+    given_names: Spouse’s mother | Given names
+    age: Spouse’s mother | Age
+
+  spouse_father_father:
+    _: Spouse’s father’s father
+    surname: Spouse’s father’s father | Surname
+    given_names: Spouse’s father’s father | Given names
+    age: Spouse’s father’s father | Age
+
+  spouse_father_mother:
+    _: Spouse’s father’s mother
+    surname: Spouse’s father’s mother | Surname
+    given_names: Spouse’s father’s mother | Given names
+    age: Spouse’s father’s mother | Age
+
+  spouse_mother_father:
+    _: Spouse’s mother’s father
+    surname: Spouse’s mother’s father | Surname
+    given_names: Spouse’s mother’s father | Given names
+    age: Spouse’s mother’s father | Age
+
+  spouse_mother_mother:
+    _: Spouse’s mother’s mother
+    surname: Spouse’s mother’s mother | Surname
+    given_names: Spouse’s mother’s mother | Given names
+    age: Spouse’s mother’s mother | Age
+
+event:
+  _: Event
+
+  birth:
+    _: Birth
+    full_date: Birth | Full date
+    day: Birth | Day
+    month: Birth | Month
+    year: Birth | Year
+    place: Birth | Place
+    province: Birth | Province
+    country: Birth | Country
+
+  baptism:
+    _: Baptism
+    full_date: Baptism | Full date
+    day: Baptism | Day
+    month: Baptism | Month
+    year: Baptism | Year
+    place: Baptism | Place
+    province: Baptism | Province
+    country: Baptism | Country
+
+  marriage:
+    _: Marriage
+    full_date: Marriage | Full date
+    day: Marriage | Day
+    month: Marriage | Month
+    year: Marriage | Year
+    place: Marriage | Place
+    province: Marriage | Province
+    country: Marriage | Country
+
+  death:
+    _: Death
+    full_date: Death | Full date
+    day: Death | Day
+    month: Death | Month
+    year: Death | Year
+    place: Death | Place
+    province: Death | Province
+    country: Death | Country
+
+  burial:
+    _: Burial
+    full_date: Burial | Full date
+    day: Burial | Day
+    month: Burial | Month
+    year: Burial | Year
+    place: Burial | Place
+    province: Burial | Province
+    country: Burial | Country
+
+  other:
+    _: Other
+    full_date: Other | Full date
+    day: Other | Day
+    month: Other | Month
+    year: Other | Year
+    place: Other | Place
+    province: Other | Province
+    country: Other | Country
+    type: Other | Type

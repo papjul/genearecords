@@ -1,0 +1,160 @@
+record:
+  _: Atto
+  record_type: Tipo di atto
+  record_number: Numero di atto
+  page_number: Numero di pagina
+  notes: Note
+  indexed_by: Indicizzato da
+  source: Fonte
+  link: Link
+
+person:
+  _: Persona
+
+  individual:
+    _: Persona interessata
+    surname: Cognome
+    given_names: Nome
+    age: Età
+
+  spouse:
+    _: Coniuge
+    surname: Coniuge | Cognome
+    given_names: Coniuge | Nome
+    age: Coniuge | Età
+
+  father:
+    _: Padre
+    surname: Padre | Cognome
+    given_names: Padre | Nome
+    age: Padre | Età
+
+  mother:
+    _: Madre
+    surname: Madre | Cognome
+    given_names: Madre | Nome
+    age: Madre | Età
+
+  father_father:
+    _: Padre del padre
+    surname: Padre del padre | Cognome
+    given_names: Padre del padre | Nome
+    age: Padre del padre | Età
+
+  father_mother:
+    _: Madre del padre
+    surname: Madre del padre | Cognome
+    given_names: Madre del padre | Nome
+    age: Madre del padre | Età
+
+  mother_father:
+    _: Padre della madre
+    surname: Padre della madre | Cognome
+    given_names: Padre della madre | Nome
+    age: Padre della madre | Età
+
+  mother_mother:
+    _: Madre della madre
+    surname: Madre della madre | Cognome
+    given_names: Madre della madre | Nome
+    age: Madre della madre | Età
+
+  spouse_father:
+    _: Padre del coniuge
+    surname: Padre del coniuge | Cognome
+    given_names: Padre del coniuge | Nome
+    age: Padre del coniuge | Età
+
+  spouse_mother:
+    _: Madre del coniuge
+    surname: Madre del coniuge | Cognome
+    given_names: Madre del coniuge | Nome
+    age: Madre del coniuge | Età
+
+  spouse_father_father:
+    _: Padre del padre del coniuge
+    surname: Padre del padre del coniuge | Cognome
+    given_names: Padre del padre del coniuge | Nome
+    age: Padre del padre del coniuge | Età
+
+  spouse_father_mother:
+    _: Madre del padre del coniuge
+    surname: Madre del padre del coniuge | Cognome
+    given_names: Madre del padre del coniuge | Nome
+    age: Madre del padre del coniuge | Età
+
+  spouse_mother_father:
+    _: Padre della madre del coniuge
+    surname: Padre della madre del coniuge | Cognome
+    given_names: Padre della madre del coniuge | Nome
+    age: Padre della madre del coniuge | Età
+
+  spouse_mother_mother:
+    _: Madre della madre del coniuge
+    surname: Madre della madre del coniuge | Cognome
+    given_names: Madre della madre del coniuge | Nome
+    age: Madre della madre del coniuge | Età
+
+event:
+  _: Evento
+
+  birth:
+    _: Nato
+    full_date: Nato | Data completa
+    day: Nato | Giorno
+    month: Nato | Mese
+    year: Nato | Anno
+    place: Nato | Luogo
+    province: Nato | Provincia
+    country: Nato | Paese
+
+  baptism:
+    _: Battesimo
+    full_date: Battesimo | Data completa
+    day: Battesimo | Giorno
+    month: Battesimo | Mese
+    year: Battesimo | Anno
+    place: Battesimo | Luogo
+    province: Battesimo | Provincia
+    country: Battesimo | Paese
+
+  marriage:
+    _: Matrimonio
+    full_date: Matrimonio | Data completa
+    day: Matrimonio | Giorno
+    month: Matrimonio | Mese
+    year: Matrimonio | Anno
+    place: Matrimonio | Luogo
+    province: Matrimonio | Provincia
+    country: Matrimonio | Paese
+
+  death:
+    _: Defunto
+    full_date: Defunto | Data completa
+    day: Defunto | Giorno
+    month: Defunto | Mese
+    year: Defunto | Anno
+    place: Defunto | Luogo
+    province: Defunto | Provincia
+    country: Defunto | Paese
+
+  burial:
+    _: Burial
+    full_date: Burial | Data completa
+    day: Burial | Giorno
+    month: Burial | Mese
+    year: Burial | Anno
+    place: Burial | Luogo
+    province: Burial | Provincia
+    country: Burial | Paese
+
+  other:
+    _: Altro
+    full_date: Altro | Data completa
+    day: Altro | Giorno
+    month: Altro | Mese
+    year: Altro | Anno
+    place: Altro | Luogo
+    province: Altro | Provincia
+    country: Altro | Paese
+    type: Altro | Tipo

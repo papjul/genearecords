@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ 'ui.admin.csv_import'|trans }}</h5>
+
+                    <a class="btn btn-primary" href="{{ path('admin_import') }}">{{ 'ui.admin.csv_import'|trans }}</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Export</h5>
+
+                    <p>Come back later</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Users</h5>
+
+                    <p>Come back later</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ 'ui.admin.locations'|trans }}</h5>
+
+                    <a class="btn btn-primary" href="{{ path('admin_locations') }}">{{ 'ui.admin.locations'|trans }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
